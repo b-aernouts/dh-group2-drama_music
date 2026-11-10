@@ -6,16 +6,16 @@ This repository holds the cleaning of the **Music** and **Drama** part of the Br
 metadata dataset, done in OpenRefine. It is part of the Group 2 project (Omar & Bert).
 
 - **Source:** British Library, *Microsoft Books* digitised books metadata - https://doi.org/10.23636/1140
-- **Input:** 1) `data/raw/MicrosoftBooks-Drama.xlsx`. It has x sheets, but only the main `Drama` sheet
-  (x records) will be used: the subgenre sheets are subsets of it. 2) `data/raw/MicrosoftBooks-Music.xlsx`. It has x sheets, but only the main `Drama` sheet
-  (x records) will be used: the subgenre sheets are subsets of it.
+- **Input:** 1) `data/raw/MicrosoftBooks-Drama.xlsx`. It has 5 sheets, but only the main `Drama` sheet
+  (1647 records) will be used: the subgenre sheets are subsets of it. 2) `data/raw/MicrosoftBooks-Music.xlsx`. It has 6 sheets, but only the main `Music` sheet
+  (980 records) will be used: the subgenre sheets are subsets of it.
 
 ## Structure
 | Path | Contents |
 |---|---|
 | `data/raw/` | Original file as downloaded. **Never modified.** |
 | `data/interim/` | Versions exported from OpenRefine at each cleaning stage |
-| `data/clean/` | Final cleaned Prose dataset, ready to merge |
+| `data/clean/` | Final cleaned Drama and Music dataset, ready to merge |
 | `openrefine/` | Exported OpenRefine operation histories (Undo/Redo → Extract → JSON) |
 
 ## Reproducing
