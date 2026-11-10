@@ -22,6 +22,24 @@
 ## 10/11/2026 Step 1 Whitespace
 - All trailing whitespaces and double whitespaces were deleted in all columns. This operation affected 0 cells, the data was clean on this part.
 
-## 10/11/2026 Step 2 Title
+## 10/11/2026 Step 2 Title "Electronic Resource"
 - Remove "[electronic resource]" using `value.replace(/\s*\[electronic resource\]/, "")`. 1646 cells out of 1647 were affected, all mentions were removed.
-- 
+
+## 10/11/2026 Step 3 Remove DDC column
+- Because of the lack of data in all three sets, we decided to remove the DDC column.
+
+## 10/11/2026 Step 4 Author name standardisation
+- Split `Personal author` column on","-separator => this splits the last name, first name, date information, person title and other possible information
+- Normalise last name => Titlecase, 909 cells impacted
+    - Manual check on nobility names where "de" has been capitalised => manually changed 10 cells.
+- Place all date information in `Personal author 3` column
+- Rename column with date information to `Personal author date`
+
+## 10/11/2026 Step 5 Language (041)
+- Remove MARC format and convert to comma separated lang codes. 3 records were edited manually.
+
+## 10/11/2026 Step 6 Title bracket removal
+- Removing square brackets around title by creating new column with rule `value.replace(/^\[(.*)\]$/, "$1")`
+- Check difference and manually change 5 records.
+- Remove old Title column and change name TEST title to Title.
+

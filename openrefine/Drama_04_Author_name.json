@@ -1,0 +1,3094 @@
+[
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column Personal author by separator"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author 1",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author 1 using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Personal author 1",
+          "columnName": "Personal author 1",
+          "query": "de ",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Guilbert De Pixérécourt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Guilbert de Pixérécourt"
+      }
+    ],
+    "description": "Mass edit cells in column Personal author 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Personal author 1",
+          "columnName": "Personal author 1",
+          "query": "de ",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Brulart De Genlis"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Brulart de Genlis"
+      }
+    ],
+    "description": "Mass edit cells in column Personal author 1"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Personal author 3",
+          "expression": "value",
+          "columnName": "Personal author 3",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " and BULLOCH (John Malcolm)",
+                "l": " and BULLOCH (John Malcolm)"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Fall of Carthage.”.",
+                "l": " Author of “The Fall of Carthage.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Colonel.",
+                "l": " Colonel."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl of Carnarvon.",
+                "l": " Earl of Carnarvon."
+              }
+            },
+            {
+              "v": {
+                "v": " Prince di San Donato.",
+                "l": " Prince di San Donato."
+              }
+            },
+            {
+              "v": {
+                "v": " Hon. Sir.",
+                "l": " Hon. Sir."
+              }
+            },
+            {
+              "v": {
+                "v": " Master of Arts.",
+                "l": " Master of Arts."
+              }
+            },
+            {
+              "v": {
+                "v": " Poet Laureate.",
+                "l": " Poet Laureate."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl of",
+                "l": " Earl of"
+              }
+            },
+            {
+              "v": {
+                "v": " Baroness Dacre.",
+                "l": " Baroness Dacre."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic Author.",
+                "l": " Dramatic Author."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic Writer.",
+                "l": " Dramatic Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " of York.",
+                "l": " of York."
+              }
+            },
+            {
+              "v": {
+                "v": " Journalist.",
+                "l": " Journalist."
+              }
+            },
+            {
+              "v": {
+                "v": " of Clifford's Inn.",
+                "l": " of Clifford's Inn."
+              }
+            },
+            {
+              "v": {
+                "v": " the Elder.",
+                "l": " the Elder."
+              }
+            },
+            {
+              "v": {
+                "v": " Attorney.",
+                "l": " Attorney."
+              }
+            },
+            {
+              "v": {
+                "v": " Publisher.",
+                "l": " Publisher."
+              }
+            },
+            {
+              "v": {
+                "v": " of Leicester.",
+                "l": " of Leicester."
+              }
+            },
+            {
+              "v": {
+                "v": " Anne Charlotte.",
+                "l": " Anne Charlotte."
+              }
+            },
+            {
+              "v": {
+                "v": " M.D.",
+                "l": " M.D."
+              }
+            },
+            {
+              "v": {
+                "v": " Member of the Dramatic Authors' Society.",
+                "l": " Member of the Dramatic Authors' Society."
+              }
+            },
+            {
+              "v": {
+                "v": " Artist.",
+                "l": " Artist."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. John William Cole.]",
+                "l": " pseud. [i.e. John William Cole.]"
+              }
+            },
+            {
+              "v": {
+                "v": " Tragedian.",
+                "l": " Tragedian."
+              }
+            },
+            {
+              "v": {
+                "v": " and POLLOCK (Walter Herries)",
+                "l": " and POLLOCK (Walter Herries)"
+              }
+            },
+            {
+              "v": {
+                "v": " Actor.",
+                "l": " Actor."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Manuscripts of Erdély.”.",
+                "l": " Author of “The Manuscripts of Erdély.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Mary Anne",
+                "l": " Mary Anne"
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatist",
+                "l": " Dramatist"
+              }
+            },
+            {
+              "v": {
+                "v": " Barrister-at-Law.",
+                "l": " Barrister-at-Law."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon's Mate",
+                "l": " Surgeon's Mate"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Life of Canning.”.",
+                "l": " Author of “The Life of Canning.”."
+              }
+            },
+            {
+              "v": {
+                "v": " of Stratford-upon-Avon.",
+                "l": " of Stratford-upon-Avon."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl of Devon.",
+                "l": " Earl of Devon."
+              }
+            },
+            {
+              "v": {
+                "v": " Eugenius.",
+                "l": " Eugenius."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Robert William Jackson]",
+                "l": " pseud. [i.e. Robert William Jackson]"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “Balfour Randall",
+                "l": " Author of “Balfour Randall"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Miss Isabella Harwood.]",
+                "l": " pseud. [i.e. Miss Isabella Harwood.]"
+              }
+            },
+            {
+              "v": {
+                "v": " of Old Court",
+                "l": " of Old Court"
+              }
+            },
+            {
+              "v": {
+                "v": " of Shaftesbury",
+                "l": " of Shaftesbury"
+              }
+            },
+            {
+              "v": {
+                "v": " Duke of Newcastle.",
+                "l": " Duke of Newcastle."
+              }
+            },
+            {
+              "v": {
+                "v": " Baron Dacre.",
+                "l": " Baron Dacre."
+              }
+            },
+            {
+              "v": {
+                "v": " Writer of Plays.",
+                "l": " Writer of Plays."
+              }
+            },
+            {
+              "v": {
+                "v": " of Cambridge.",
+                "l": " of Cambridge."
+              }
+            },
+            {
+              "v": {
+                "v": " afterwards CLIFFORD (Elizabeth Lydia Rosabelle) Lady.",
+                "l": " afterwards CLIFFORD (Elizabeth Lydia Rosabelle) Lady."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic and Miscellaneous Writer.",
+                "l": " Dramatic and Miscellaneous Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Emilia Aylmer.",
+                "l": " Emilia Aylmer."
+              }
+            },
+            {
+              "v": {
+                "v": " Miscellaneous Writer.",
+                "l": " Miscellaneous Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Vicar of Poling.",
+                "l": " Vicar of Poling."
+              }
+            },
+            {
+              "v": {
+                "v": " Sara King.",
+                "l": " Sara King."
+              }
+            },
+            {
+              "v": {
+                "v": " of Nottingham.",
+                "l": " of Nottingham."
+              }
+            },
+            {
+              "v": {
+                "v": " and WAGNER (Leopold)",
+                "l": " and WAGNER (Leopold)"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Edith Katharine Spicer Jay.]",
+                "l": " pseud. [i.e. Edith Katharine Spicer Jay.]"
+              }
+            },
+            {
+              "v": {
+                "v": " M.A.",
+                "l": " M.A."
+              }
+            },
+            {
+              "v": {
+                "v": " Contributor to “The Microcosm.”.",
+                "l": " Contributor to “The Microcosm.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Barrister-at-Law",
+                "l": " Barrister-at-Law"
+              }
+            },
+            {
+              "v": {
+                "v": " Sir",
+                "l": " Sir"
+              }
+            },
+            {
+              "v": {
+                "v": " Lady.",
+                "l": " Lady."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatist.",
+                "l": " Dramatist."
+              }
+            },
+            {
+              "v": {
+                "v": " of Manchester.",
+                "l": " of Manchester."
+              }
+            },
+            {
+              "v": {
+                "v": " Baron",
+                "l": " Baron"
+              }
+            },
+            {
+              "v": {
+                "v": " Ellen Creathorne.",
+                "l": " Ellen Creathorne."
+              }
+            },
+            {
+              "v": {
+                "v": " and SHEWELL (L. R.)",
+                "l": " and SHEWELL (L. R.)"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Marian Andrews.]",
+                "l": " pseud. [i.e. Marian Andrews.]"
+              }
+            },
+            {
+              "v": {
+                "v": " Bishop of Exeter.",
+                "l": " Bishop of Exeter."
+              }
+            },
+            {
+              "v": {
+                "v": " Vicar of Newcastle-upon-Tyne.",
+                "l": " Vicar of Newcastle-upon-Tyne."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon.",
+                "l": " Surgeon."
+              }
+            },
+            {
+              "v": {
+                "v": " Esq.",
+                "l": " Esq."
+              }
+            },
+            {
+              "v": {
+                "v": " Schoolmaster.",
+                "l": " Schoolmaster."
+              }
+            },
+            {
+              "v": {
+                "v": " of New York.",
+                "l": " of New York."
+              }
+            },
+            {
+              "v": {
+                "v": " calling himself Dumaniant.",
+                "l": " calling himself Dumaniant."
+              }
+            },
+            {
+              "v": {
+                "v": " B.A.",
+                "l": " B.A."
+              }
+            },
+            {
+              "v": {
+                "v": " Poet",
+                "l": " Poet"
+              }
+            },
+            {
+              "v": {
+                "v": " comte de",
+                "l": " comte de"
+              }
+            },
+            {
+              "v": {
+                "v": " afterwards ARBUTHNOT (Constance Angelena) Lady.",
+                "l": " afterwards ARBUTHNOT (Constance Angelena) Lady."
+              }
+            },
+            {
+              "v": {
+                "v": " Secretary to the Hon. Order of the Bath.",
+                "l": " Secretary to the Hon. Order of the Bath."
+              }
+            },
+            {
+              "v": {
+                "v": " M.P.",
+                "l": " M.P."
+              }
+            },
+            {
+              "v": {
+                "v": " of Bristol.",
+                "l": " of Bristol."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Chapter of Accidents”.",
+                "l": " Author of “The Chapter of Accidents”."
+              }
+            },
+            {
+              "v": {
+                "v": " of Kidderminster.",
+                "l": " of Kidderminster."
+              }
+            },
+            {
+              "v": {
+                "v": " 1st Duke of Northumberland.",
+                "l": " 1st Duke of Northumberland."
+              }
+            },
+            {
+              "v": {
+                "v": " of Christ Church",
+                "l": " of Christ Church"
+              }
+            },
+            {
+              "v": {
+                "v": " Hon.",
+                "l": " Hon."
+              }
+            },
+            {
+              "v": {
+                "v": " and F. (N.)",
+                "l": " and F. (N.)"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of Vimonda.",
+                "l": " Author of Vimonda."
+              }
+            },
+            {
+              "v": {
+                "v": " Mr.",
+                "l": " Mr."
+              }
+            },
+            {
+              "v": {
+                "v": " L.L.D.",
+                "l": " L.L.D."
+              }
+            },
+            {
+              "v": {
+                "v": " of Newcastle-upon-Tyne?.",
+                "l": " of Newcastle-upon-Tyne?."
+              }
+            },
+            {
+              "v": {
+                "v": " Sir.",
+                "l": " Sir."
+              }
+            },
+            {
+              "v": {
+                "v": " Marie Thérèse.",
+                "l": " Marie Thérèse."
+              }
+            },
+            {
+              "v": {
+                "v": " of Trinity College",
+                "l": " of Trinity College"
+              }
+            },
+            {
+              "v": {
+                "v": " Baron Beaumont.",
+                "l": " Baron Beaumont."
+              }
+            },
+            {
+              "v": {
+                "v": " of Scarborough.",
+                "l": " of Scarborough."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. John Wolcot.]",
+                "l": " pseud. [i.e. John Wolcot.]"
+              }
+            },
+            {
+              "v": {
+                "v": " Right Hon. Sir",
+                "l": " Right Hon. Sir"
+              }
+            },
+            {
+              "v": {
+                "v": " Mrs.",
+                "l": " Mrs."
+              }
+            },
+            {
+              "v": {
+                "v": " Duke of",
+                "l": " Duke of"
+              }
+            },
+            {
+              "v": {
+                "v": " of Brighton.",
+                "l": " of Brighton."
+              }
+            },
+            {
+              "v": {
+                "v": " of the Theatre Royal",
+                "l": " of the Theatre Royal"
+              }
+            },
+            {
+              "v": {
+                "v": " Vicar of St. Sepulchre",
+                "l": " Vicar of St. Sepulchre"
+              }
+            },
+            {
+              "v": {
+                "v": " Translator of “The Lusiad.”.",
+                "l": " Translator of “The Lusiad.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Historiographer Royal to Charles II.",
+                "l": " Historiographer Royal to Charles II."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Pearl Mary-Teresa Craigie.]",
+                "l": " pseud. [i.e. Pearl Mary-Teresa Craigie.]"
+              }
+            },
+            {
+              "v": {
+                "v": " and (Horatio Huntley)",
+                "l": " and (Horatio Huntley)"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. James Roberts Gilmore.]",
+                "l": " pseud. [i.e. James Roberts Gilmore.]"
+              }
+            },
+            {
+              "v": {
+                "v": " George.",
+                "l": " George."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Macnamara Morgan.]",
+                "l": " pseud. [i.e. Macnamara Morgan.]"
+              }
+            },
+            {
+              "v": {
+                "v": " the Younger.",
+                "l": " the Younger."
+              }
+            },
+            {
+              "v": {
+                "v": " Marchioness de Sillery.",
+                "l": " Marchioness de Sillery."
+              }
+            },
+            {
+              "v": {
+                "v": " Lecturer.",
+                "l": " Lecturer."
+              }
+            },
+            {
+              "v": {
+                "v": " Playwright.",
+                "l": " Playwright."
+              }
+            },
+            {
+              "v": {
+                "v": " Poetical Writer.",
+                "l": " Poetical Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Mary.",
+                "l": " Mary."
+              }
+            },
+            {
+              "v": {
+                "v": " of Faversham.",
+                "l": " of Faversham."
+              }
+            },
+            {
+              "v": {
+                "v": " Miss.",
+                "l": " Miss."
+              }
+            },
+            {
+              "v": {
+                "v": " William.",
+                "l": " William."
+              }
+            },
+            {
+              "v": {
+                "v": " Antiquary.",
+                "l": " Antiquary."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Bryan Waller Procter.]",
+                "l": " pseud. [i.e. Bryan Waller Procter.]"
+              }
+            },
+            {
+              "v": {
+                "v": " of Topsham.",
+                "l": " of Topsham."
+              }
+            },
+            {
+              "v": {
+                "v": " Lessee of Royalty Theatre.",
+                "l": " Lessee of Royalty Theatre."
+              }
+            },
+            {
+              "v": {
+                "v": " Right Hon.",
+                "l": " Right Hon."
+              }
+            },
+            {
+              "v": {
+                "v": " A.M.",
+                "l": " A.M."
+              }
+            },
+            {
+              "v": {
+                "v": " Baron Chedworth.",
+                "l": " Baron Chedworth."
+              }
+            },
+            {
+              "v": {
+                "v": " LL.D.",
+                "l": " LL.D."
+              }
+            },
+            {
+              "v": {
+                "v": " D.D.",
+                "l": " D.D."
+              }
+            },
+            {
+              "v": {
+                "v": " Junr.",
+                "l": " Junr."
+              }
+            },
+            {
+              "v": {
+                "v": " Theatrical Machinist.",
+                "l": " Theatrical Machinist."
+              }
+            },
+            {
+              "v": {
+                "v": " Dean of St. Paul's.",
+                "l": " Dean of St. Paul's."
+              }
+            },
+            {
+              "v": {
+                "v": " Stage Manager.",
+                "l": " Stage Manager."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Conspiracy”.",
+                "l": " Author of “The Conspiracy”."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon",
+                "l": " Surgeon"
+              }
+            },
+            {
+              "v": {
+                "v": " of Abingdon.",
+                "l": " of Abingdon."
+              }
+            },
+            {
+              "v": {
+                "v": " Novelist.",
+                "l": " Novelist."
+              }
+            },
+            {
+              "v": {
+                "v": " Abram Henry Herbert.",
+                "l": " Abram Henry Herbert."
+              }
+            },
+            {
+              "v": {
+                "v": " Viscount",
+                "l": " Viscount"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. William Thomas Thomas.]",
+                "l": " pseud. [i.e. William Thomas Thomas.]"
+              }
+            },
+            {
+              "v": {
+                "v": " of Drogheda.",
+                "l": " of Drogheda."
+              }
+            },
+            {
+              "v": {
+                "v": " Countess of Hardwicke.",
+                "l": " Countess of Hardwicke."
+              }
+            },
+            {
+              "v": {
+                "v": " of Westminster School.",
+                "l": " of Westminster School."
+              }
+            },
+            {
+              "v": {
+                "v": " Secretary to the Earl of Roxburgh.",
+                "l": " Secretary to the Earl of Roxburgh."
+              }
+            },
+            {
+              "v": {
+                "v": " Frances Anne.",
+                "l": " Frances Anne."
+              }
+            },
+            {
+              "v": {
+                "v": " Teacher of Elocution.",
+                "l": " Teacher of Elocution."
+              }
+            },
+            {
+              "v": {
+                "v": " Annie Hall.",
+                "l": " Annie Hall."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Theodore MacFadden.]",
+                "l": " pseud. [i.e. Theodore MacFadden.]"
+              }
+            },
+            {
+              "v": {
+                "v": " Rev.",
+                "l": " Rev."
+              }
+            },
+            {
+              "v": {
+                "v": " 5th Earl of Carlisle.",
+                "l": " 5th Earl of Carlisle."
+              }
+            },
+            {
+              "v": {
+                "v": " of Surbiton.",
+                "l": " of Surbiton."
+              }
+            },
+            {
+              "v": {
+                "v": " and ARNOLD (Samuel James)",
+                "l": " and ARNOLD (Samuel James)"
+              }
+            },
+            {
+              "v": {
+                "v": " 4th Viscount Falkland.",
+                "l": " 4th Viscount Falkland."
+              }
+            },
+            {
+              "v": {
+                "v": " of Braintree",
+                "l": " of Braintree"
+              }
+            },
+            {
+              "v": {
+                "v": " Lisbeth Gooch.",
+                "l": " Lisbeth Gooch."
+              }
+            },
+            {
+              "v": {
+                "v": " afterwards LASZOWSKA (Emily de)",
+                "l": " afterwards LASZOWSKA (Emily de)"
+              }
+            },
+            {
+              "v": {
+                "v": " Engraver and Silversmith.",
+                "l": " Engraver and Silversmith."
+              }
+            },
+            {
+              "v": {
+                "v": " Professor of Oriental Languages at St. Andrews.",
+                "l": " Professor of Oriental Languages at St. Andrews."
+              }
+            },
+            {
+              "v": {
+                "v": " City Poet.",
+                "l": " City Poet."
+              }
+            },
+            {
+              "v": {
+                "v": " Frances.",
+                "l": " Frances."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Frederick Guthrie.]",
+                "l": " pseud. [i.e. Frederick Guthrie.]"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Edward Step.]",
+                "l": " pseud. [i.e. Edward Step.]"
+              }
+            },
+            {
+              "v": {
+                "v": " the Poet.",
+                "l": " the Poet."
+              }
+            },
+            {
+              "v": {
+                "v": " James Bland",
+                "l": " James Bland"
+              }
+            },
+            {
+              "v": {
+                "v": " Professor of Humanity in the University of Glasgow.",
+                "l": " Professor of Humanity in the University of Glasgow."
+              }
+            },
+            {
+              "v": {
+                "v": " Comedian.",
+                "l": " Comedian."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl",
+                "l": " Earl"
+              }
+            },
+            {
+              "v": {
+                "v": " Poet.",
+                "l": " Poet."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud.",
+                "l": " pseud."
+              }
+            },
+            {
+              "v": {
+                "v": " Gent.",
+                "l": " Gent."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl of Ross.",
+                "l": " Earl of Ross."
+              }
+            },
+            {
+              "v": {
+                "v": " Baron Rokeby.",
+                "l": " Baron Rokeby."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Personal author 3",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Non-date author info",
+    "columnInsertIndex": 7,
+    "description": "Create column Non-date author info at index 7 based on column Personal author 3 using expression grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Personal author 3",
+          "expression": "value",
+          "columnName": "Personal author 3",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " and BULLOCH (John Malcolm)",
+                "l": " and BULLOCH (John Malcolm)"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Fall of Carthage.”.",
+                "l": " Author of “The Fall of Carthage.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Colonel.",
+                "l": " Colonel."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl of Carnarvon.",
+                "l": " Earl of Carnarvon."
+              }
+            },
+            {
+              "v": {
+                "v": " Prince di San Donato.",
+                "l": " Prince di San Donato."
+              }
+            },
+            {
+              "v": {
+                "v": " Hon. Sir.",
+                "l": " Hon. Sir."
+              }
+            },
+            {
+              "v": {
+                "v": " Master of Arts.",
+                "l": " Master of Arts."
+              }
+            },
+            {
+              "v": {
+                "v": " Poet Laureate.",
+                "l": " Poet Laureate."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl of",
+                "l": " Earl of"
+              }
+            },
+            {
+              "v": {
+                "v": " Baroness Dacre.",
+                "l": " Baroness Dacre."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic Author.",
+                "l": " Dramatic Author."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic Writer.",
+                "l": " Dramatic Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " of York.",
+                "l": " of York."
+              }
+            },
+            {
+              "v": {
+                "v": " Journalist.",
+                "l": " Journalist."
+              }
+            },
+            {
+              "v": {
+                "v": " of Clifford's Inn.",
+                "l": " of Clifford's Inn."
+              }
+            },
+            {
+              "v": {
+                "v": " the Elder.",
+                "l": " the Elder."
+              }
+            },
+            {
+              "v": {
+                "v": " Attorney.",
+                "l": " Attorney."
+              }
+            },
+            {
+              "v": {
+                "v": " Publisher.",
+                "l": " Publisher."
+              }
+            },
+            {
+              "v": {
+                "v": " of Leicester.",
+                "l": " of Leicester."
+              }
+            },
+            {
+              "v": {
+                "v": " Anne Charlotte.",
+                "l": " Anne Charlotte."
+              }
+            },
+            {
+              "v": {
+                "v": " M.D.",
+                "l": " M.D."
+              }
+            },
+            {
+              "v": {
+                "v": " Member of the Dramatic Authors' Society.",
+                "l": " Member of the Dramatic Authors' Society."
+              }
+            },
+            {
+              "v": {
+                "v": " Artist.",
+                "l": " Artist."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. John William Cole.]",
+                "l": " pseud. [i.e. John William Cole.]"
+              }
+            },
+            {
+              "v": {
+                "v": " Tragedian.",
+                "l": " Tragedian."
+              }
+            },
+            {
+              "v": {
+                "v": " and POLLOCK (Walter Herries)",
+                "l": " and POLLOCK (Walter Herries)"
+              }
+            },
+            {
+              "v": {
+                "v": " Actor.",
+                "l": " Actor."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Manuscripts of Erdély.”.",
+                "l": " Author of “The Manuscripts of Erdély.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Mary Anne",
+                "l": " Mary Anne"
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatist",
+                "l": " Dramatist"
+              }
+            },
+            {
+              "v": {
+                "v": " Barrister-at-Law.",
+                "l": " Barrister-at-Law."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon's Mate",
+                "l": " Surgeon's Mate"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Life of Canning.”.",
+                "l": " Author of “The Life of Canning.”."
+              }
+            },
+            {
+              "v": {
+                "v": " of Stratford-upon-Avon.",
+                "l": " of Stratford-upon-Avon."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl of Devon.",
+                "l": " Earl of Devon."
+              }
+            },
+            {
+              "v": {
+                "v": " Eugenius.",
+                "l": " Eugenius."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Robert William Jackson]",
+                "l": " pseud. [i.e. Robert William Jackson]"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “Balfour Randall",
+                "l": " Author of “Balfour Randall"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Miss Isabella Harwood.]",
+                "l": " pseud. [i.e. Miss Isabella Harwood.]"
+              }
+            },
+            {
+              "v": {
+                "v": " of Old Court",
+                "l": " of Old Court"
+              }
+            },
+            {
+              "v": {
+                "v": " of Shaftesbury",
+                "l": " of Shaftesbury"
+              }
+            },
+            {
+              "v": {
+                "v": " Duke of Newcastle.",
+                "l": " Duke of Newcastle."
+              }
+            },
+            {
+              "v": {
+                "v": " Baron Dacre.",
+                "l": " Baron Dacre."
+              }
+            },
+            {
+              "v": {
+                "v": " Writer of Plays.",
+                "l": " Writer of Plays."
+              }
+            },
+            {
+              "v": {
+                "v": " of Cambridge.",
+                "l": " of Cambridge."
+              }
+            },
+            {
+              "v": {
+                "v": " afterwards CLIFFORD (Elizabeth Lydia Rosabelle) Lady.",
+                "l": " afterwards CLIFFORD (Elizabeth Lydia Rosabelle) Lady."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic and Miscellaneous Writer.",
+                "l": " Dramatic and Miscellaneous Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Emilia Aylmer.",
+                "l": " Emilia Aylmer."
+              }
+            },
+            {
+              "v": {
+                "v": " Miscellaneous Writer.",
+                "l": " Miscellaneous Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Vicar of Poling.",
+                "l": " Vicar of Poling."
+              }
+            },
+            {
+              "v": {
+                "v": " Sara King.",
+                "l": " Sara King."
+              }
+            },
+            {
+              "v": {
+                "v": " of Nottingham.",
+                "l": " of Nottingham."
+              }
+            },
+            {
+              "v": {
+                "v": " and WAGNER (Leopold)",
+                "l": " and WAGNER (Leopold)"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Edith Katharine Spicer Jay.]",
+                "l": " pseud. [i.e. Edith Katharine Spicer Jay.]"
+              }
+            },
+            {
+              "v": {
+                "v": " M.A.",
+                "l": " M.A."
+              }
+            },
+            {
+              "v": {
+                "v": " Contributor to “The Microcosm.”.",
+                "l": " Contributor to “The Microcosm.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Barrister-at-Law",
+                "l": " Barrister-at-Law"
+              }
+            },
+            {
+              "v": {
+                "v": " Sir",
+                "l": " Sir"
+              }
+            },
+            {
+              "v": {
+                "v": " Lady.",
+                "l": " Lady."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatist.",
+                "l": " Dramatist."
+              }
+            },
+            {
+              "v": {
+                "v": " of Manchester.",
+                "l": " of Manchester."
+              }
+            },
+            {
+              "v": {
+                "v": " Baron",
+                "l": " Baron"
+              }
+            },
+            {
+              "v": {
+                "v": " Ellen Creathorne.",
+                "l": " Ellen Creathorne."
+              }
+            },
+            {
+              "v": {
+                "v": " and SHEWELL (L. R.)",
+                "l": " and SHEWELL (L. R.)"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Marian Andrews.]",
+                "l": " pseud. [i.e. Marian Andrews.]"
+              }
+            },
+            {
+              "v": {
+                "v": " Bishop of Exeter.",
+                "l": " Bishop of Exeter."
+              }
+            },
+            {
+              "v": {
+                "v": " Vicar of Newcastle-upon-Tyne.",
+                "l": " Vicar of Newcastle-upon-Tyne."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon.",
+                "l": " Surgeon."
+              }
+            },
+            {
+              "v": {
+                "v": " Esq.",
+                "l": " Esq."
+              }
+            },
+            {
+              "v": {
+                "v": " Schoolmaster.",
+                "l": " Schoolmaster."
+              }
+            },
+            {
+              "v": {
+                "v": " of New York.",
+                "l": " of New York."
+              }
+            },
+            {
+              "v": {
+                "v": " calling himself Dumaniant.",
+                "l": " calling himself Dumaniant."
+              }
+            },
+            {
+              "v": {
+                "v": " B.A.",
+                "l": " B.A."
+              }
+            },
+            {
+              "v": {
+                "v": " Poet",
+                "l": " Poet"
+              }
+            },
+            {
+              "v": {
+                "v": " comte de",
+                "l": " comte de"
+              }
+            },
+            {
+              "v": {
+                "v": " afterwards ARBUTHNOT (Constance Angelena) Lady.",
+                "l": " afterwards ARBUTHNOT (Constance Angelena) Lady."
+              }
+            },
+            {
+              "v": {
+                "v": " Secretary to the Hon. Order of the Bath.",
+                "l": " Secretary to the Hon. Order of the Bath."
+              }
+            },
+            {
+              "v": {
+                "v": " M.P.",
+                "l": " M.P."
+              }
+            },
+            {
+              "v": {
+                "v": " of Bristol.",
+                "l": " of Bristol."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Chapter of Accidents”.",
+                "l": " Author of “The Chapter of Accidents”."
+              }
+            },
+            {
+              "v": {
+                "v": " of Kidderminster.",
+                "l": " of Kidderminster."
+              }
+            },
+            {
+              "v": {
+                "v": " 1st Duke of Northumberland.",
+                "l": " 1st Duke of Northumberland."
+              }
+            },
+            {
+              "v": {
+                "v": " of Christ Church",
+                "l": " of Christ Church"
+              }
+            },
+            {
+              "v": {
+                "v": " Hon.",
+                "l": " Hon."
+              }
+            },
+            {
+              "v": {
+                "v": " and F. (N.)",
+                "l": " and F. (N.)"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of Vimonda.",
+                "l": " Author of Vimonda."
+              }
+            },
+            {
+              "v": {
+                "v": " Mr.",
+                "l": " Mr."
+              }
+            },
+            {
+              "v": {
+                "v": " L.L.D.",
+                "l": " L.L.D."
+              }
+            },
+            {
+              "v": {
+                "v": " of Newcastle-upon-Tyne?.",
+                "l": " of Newcastle-upon-Tyne?."
+              }
+            },
+            {
+              "v": {
+                "v": " Sir.",
+                "l": " Sir."
+              }
+            },
+            {
+              "v": {
+                "v": " Marie Thérèse.",
+                "l": " Marie Thérèse."
+              }
+            },
+            {
+              "v": {
+                "v": " of Trinity College",
+                "l": " of Trinity College"
+              }
+            },
+            {
+              "v": {
+                "v": " Baron Beaumont.",
+                "l": " Baron Beaumont."
+              }
+            },
+            {
+              "v": {
+                "v": " of Scarborough.",
+                "l": " of Scarborough."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. John Wolcot.]",
+                "l": " pseud. [i.e. John Wolcot.]"
+              }
+            },
+            {
+              "v": {
+                "v": " Right Hon. Sir",
+                "l": " Right Hon. Sir"
+              }
+            },
+            {
+              "v": {
+                "v": " Mrs.",
+                "l": " Mrs."
+              }
+            },
+            {
+              "v": {
+                "v": " Duke of",
+                "l": " Duke of"
+              }
+            },
+            {
+              "v": {
+                "v": " of Brighton.",
+                "l": " of Brighton."
+              }
+            },
+            {
+              "v": {
+                "v": " of the Theatre Royal",
+                "l": " of the Theatre Royal"
+              }
+            },
+            {
+              "v": {
+                "v": " Vicar of St. Sepulchre",
+                "l": " Vicar of St. Sepulchre"
+              }
+            },
+            {
+              "v": {
+                "v": " Translator of “The Lusiad.”.",
+                "l": " Translator of “The Lusiad.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Historiographer Royal to Charles II.",
+                "l": " Historiographer Royal to Charles II."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Pearl Mary-Teresa Craigie.]",
+                "l": " pseud. [i.e. Pearl Mary-Teresa Craigie.]"
+              }
+            },
+            {
+              "v": {
+                "v": " and (Horatio Huntley)",
+                "l": " and (Horatio Huntley)"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. James Roberts Gilmore.]",
+                "l": " pseud. [i.e. James Roberts Gilmore.]"
+              }
+            },
+            {
+              "v": {
+                "v": " George.",
+                "l": " George."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Macnamara Morgan.]",
+                "l": " pseud. [i.e. Macnamara Morgan.]"
+              }
+            },
+            {
+              "v": {
+                "v": " the Younger.",
+                "l": " the Younger."
+              }
+            },
+            {
+              "v": {
+                "v": " Marchioness de Sillery.",
+                "l": " Marchioness de Sillery."
+              }
+            },
+            {
+              "v": {
+                "v": " Lecturer.",
+                "l": " Lecturer."
+              }
+            },
+            {
+              "v": {
+                "v": " Playwright.",
+                "l": " Playwright."
+              }
+            },
+            {
+              "v": {
+                "v": " Poetical Writer.",
+                "l": " Poetical Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Mary.",
+                "l": " Mary."
+              }
+            },
+            {
+              "v": {
+                "v": " of Faversham.",
+                "l": " of Faversham."
+              }
+            },
+            {
+              "v": {
+                "v": " Miss.",
+                "l": " Miss."
+              }
+            },
+            {
+              "v": {
+                "v": " William.",
+                "l": " William."
+              }
+            },
+            {
+              "v": {
+                "v": " Antiquary.",
+                "l": " Antiquary."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Bryan Waller Procter.]",
+                "l": " pseud. [i.e. Bryan Waller Procter.]"
+              }
+            },
+            {
+              "v": {
+                "v": " of Topsham.",
+                "l": " of Topsham."
+              }
+            },
+            {
+              "v": {
+                "v": " Lessee of Royalty Theatre.",
+                "l": " Lessee of Royalty Theatre."
+              }
+            },
+            {
+              "v": {
+                "v": " Right Hon.",
+                "l": " Right Hon."
+              }
+            },
+            {
+              "v": {
+                "v": " A.M.",
+                "l": " A.M."
+              }
+            },
+            {
+              "v": {
+                "v": " Baron Chedworth.",
+                "l": " Baron Chedworth."
+              }
+            },
+            {
+              "v": {
+                "v": " LL.D.",
+                "l": " LL.D."
+              }
+            },
+            {
+              "v": {
+                "v": " D.D.",
+                "l": " D.D."
+              }
+            },
+            {
+              "v": {
+                "v": " Junr.",
+                "l": " Junr."
+              }
+            },
+            {
+              "v": {
+                "v": " Theatrical Machinist.",
+                "l": " Theatrical Machinist."
+              }
+            },
+            {
+              "v": {
+                "v": " Dean of St. Paul's.",
+                "l": " Dean of St. Paul's."
+              }
+            },
+            {
+              "v": {
+                "v": " Stage Manager.",
+                "l": " Stage Manager."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Conspiracy”.",
+                "l": " Author of “The Conspiracy”."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon",
+                "l": " Surgeon"
+              }
+            },
+            {
+              "v": {
+                "v": " of Abingdon.",
+                "l": " of Abingdon."
+              }
+            },
+            {
+              "v": {
+                "v": " Novelist.",
+                "l": " Novelist."
+              }
+            },
+            {
+              "v": {
+                "v": " Abram Henry Herbert.",
+                "l": " Abram Henry Herbert."
+              }
+            },
+            {
+              "v": {
+                "v": " Viscount",
+                "l": " Viscount"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. William Thomas Thomas.]",
+                "l": " pseud. [i.e. William Thomas Thomas.]"
+              }
+            },
+            {
+              "v": {
+                "v": " of Drogheda.",
+                "l": " of Drogheda."
+              }
+            },
+            {
+              "v": {
+                "v": " Countess of Hardwicke.",
+                "l": " Countess of Hardwicke."
+              }
+            },
+            {
+              "v": {
+                "v": " of Westminster School.",
+                "l": " of Westminster School."
+              }
+            },
+            {
+              "v": {
+                "v": " Secretary to the Earl of Roxburgh.",
+                "l": " Secretary to the Earl of Roxburgh."
+              }
+            },
+            {
+              "v": {
+                "v": " Frances Anne.",
+                "l": " Frances Anne."
+              }
+            },
+            {
+              "v": {
+                "v": " Teacher of Elocution.",
+                "l": " Teacher of Elocution."
+              }
+            },
+            {
+              "v": {
+                "v": " Annie Hall.",
+                "l": " Annie Hall."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Theodore MacFadden.]",
+                "l": " pseud. [i.e. Theodore MacFadden.]"
+              }
+            },
+            {
+              "v": {
+                "v": " Rev.",
+                "l": " Rev."
+              }
+            },
+            {
+              "v": {
+                "v": " 5th Earl of Carlisle.",
+                "l": " 5th Earl of Carlisle."
+              }
+            },
+            {
+              "v": {
+                "v": " of Surbiton.",
+                "l": " of Surbiton."
+              }
+            },
+            {
+              "v": {
+                "v": " and ARNOLD (Samuel James)",
+                "l": " and ARNOLD (Samuel James)"
+              }
+            },
+            {
+              "v": {
+                "v": " 4th Viscount Falkland.",
+                "l": " 4th Viscount Falkland."
+              }
+            },
+            {
+              "v": {
+                "v": " of Braintree",
+                "l": " of Braintree"
+              }
+            },
+            {
+              "v": {
+                "v": " Lisbeth Gooch.",
+                "l": " Lisbeth Gooch."
+              }
+            },
+            {
+              "v": {
+                "v": " afterwards LASZOWSKA (Emily de)",
+                "l": " afterwards LASZOWSKA (Emily de)"
+              }
+            },
+            {
+              "v": {
+                "v": " Engraver and Silversmith.",
+                "l": " Engraver and Silversmith."
+              }
+            },
+            {
+              "v": {
+                "v": " Professor of Oriental Languages at St. Andrews.",
+                "l": " Professor of Oriental Languages at St. Andrews."
+              }
+            },
+            {
+              "v": {
+                "v": " City Poet.",
+                "l": " City Poet."
+              }
+            },
+            {
+              "v": {
+                "v": " Frances.",
+                "l": " Frances."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Frederick Guthrie.]",
+                "l": " pseud. [i.e. Frederick Guthrie.]"
+              }
+            },
+            {
+              "v": {
+                "v": " pseud. [i.e. Edward Step.]",
+                "l": " pseud. [i.e. Edward Step.]"
+              }
+            },
+            {
+              "v": {
+                "v": " the Poet.",
+                "l": " the Poet."
+              }
+            },
+            {
+              "v": {
+                "v": " James Bland",
+                "l": " James Bland"
+              }
+            },
+            {
+              "v": {
+                "v": " Professor of Humanity in the University of Glasgow.",
+                "l": " Professor of Humanity in the University of Glasgow."
+              }
+            },
+            {
+              "v": {
+                "v": " Comedian.",
+                "l": " Comedian."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl",
+                "l": " Earl"
+              }
+            },
+            {
+              "v": {
+                "v": " Poet.",
+                "l": " Poet."
+              }
+            },
+            {
+              "v": {
+                "v": " pseud.",
+                "l": " pseud."
+              }
+            },
+            {
+              "v": {
+                "v": " Gent.",
+                "l": " Gent."
+              }
+            },
+            {
+              "v": {
+                "v": " Earl of Ross.",
+                "l": " Earl of Ross."
+              }
+            },
+            {
+              "v": {
+                "v": " Baron Rokeby.",
+                "l": " Baron Rokeby."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author 3",
+    "expression": "grel:value.blank",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author 3 using expression grel:value.blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Personal author 4",
+          "expression": "value",
+          "columnName": "Personal author 4",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " 1769-1852",
+                "l": " 1769-1852"
+              }
+            },
+            {
+              "v": {
+                "v": " 1621-1679.",
+                "l": " 1621-1679."
+              }
+            },
+            {
+              "v": {
+                "v": " 1628-1687.",
+                "l": " 1628-1687."
+              }
+            },
+            {
+              "v": {
+                "v": " 1852-1896.",
+                "l": " 1852-1896."
+              }
+            },
+            {
+              "v": {
+                "v": " 1815-1875.",
+                "l": " 1815-1875."
+              }
+            },
+            {
+              "v": {
+                "v": " 1788-1824.",
+                "l": " 1788-1824."
+              }
+            },
+            {
+              "v": {
+                "v": " 1832-1904.",
+                "l": " 1832-1904."
+              }
+            },
+            {
+              "v": {
+                "v": " 1833-1907.",
+                "l": " 1833-1907."
+              }
+            },
+            {
+              "v": {
+                "v": " 1771-1832",
+                "l": " 1771-1832"
+              }
+            },
+            {
+              "v": {
+                "v": " 1816-1909.",
+                "l": " 1816-1909."
+              }
+            },
+            {
+              "v": {
+                "v": " 1855-1934.",
+                "l": " 1855-1934."
+              }
+            },
+            {
+              "v": {
+                "v": " 1786-1880.",
+                "l": " 1786-1880."
+              }
+            },
+            {
+              "v": {
+                "v": " 1650-1722.",
+                "l": " 1650-1722."
+              }
+            },
+            {
+              "v": {
+                "v": " 1859-1930",
+                "l": " 1859-1930"
+              }
+            },
+            {
+              "v": {
+                "v": " 1800-1886.",
+                "l": " 1800-1886."
+              }
+            },
+            {
+              "v": {
+                "v": " 1788-1824",
+                "l": " 1788-1824"
+              }
+            },
+            {
+              "v": {
+                "v": " 1797-1846.",
+                "l": " 1797-1846."
+              }
+            },
+            {
+              "v": {
+                "v": " 1792-1878",
+                "l": " 1792-1878"
+              }
+            },
+            {
+              "v": {
+                "v": " 1861-1922.",
+                "l": " 1861-1922."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Personal author 4",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "extra date",
+    "columnInsertIndex": 9,
+    "description": "Create column extra date at index 9 based on column Personal author 4 using expression grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author 3",
+    "expression": "join ([coalesce(cells['Personal author 3'].value,''),coalesce(cells['extra date'].value,'')],'')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author 3 using expression join ([coalesce(cells['Personal author 3'].value,''),coalesce(cells['extra date'].value,'')],'')"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "extra date",
+    "description": "Remove column extra date"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Personal author 3",
+    "newColumnName": "Personal author date",
+    "description": "Rename column Personal author 3 to Personal author date"
+  },
+  {
+    "op": "core/column-move-right",
+    "columnName": "Personal author date",
+    "description": "Move column Personal author date to the right"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Personal author 2",
+          "columnName": "Personal author 2",
+          "query": "afterw",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author 2",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author 2 using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Personal author 2",
+          "columnName": "Personal author 2",
+          "query": "afterw",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author 2",
+    "expression": "grel:value.replace(\"Afterwards\", \"afterwards\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author 2 using expression grel:value.replace(\"Afterwards\", \"afterwards\")"
+  },
+  {
+    "op": "core/column-move-right",
+    "columnName": "Personal author date",
+    "description": "Move column Personal author date to the right"
+  },
+  {
+    "op": "core/column-move-right",
+    "columnName": "Personal author date",
+    "description": "Move column Personal author date to the right"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Personal author 4",
+          "expression": "value",
+          "columnName": "Personal author 4",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " 1769-1852",
+                "l": " 1769-1852"
+              }
+            },
+            {
+              "v": {
+                "v": " 1621-1679.",
+                "l": " 1621-1679."
+              }
+            },
+            {
+              "v": {
+                "v": " 1628-1687.",
+                "l": " 1628-1687."
+              }
+            },
+            {
+              "v": {
+                "v": " 1852-1896.",
+                "l": " 1852-1896."
+              }
+            },
+            {
+              "v": {
+                "v": " 1815-1875.",
+                "l": " 1815-1875."
+              }
+            },
+            {
+              "v": {
+                "v": " 1788-1824.",
+                "l": " 1788-1824."
+              }
+            },
+            {
+              "v": {
+                "v": " 1832-1904.",
+                "l": " 1832-1904."
+              }
+            },
+            {
+              "v": {
+                "v": " 1833-1907.",
+                "l": " 1833-1907."
+              }
+            },
+            {
+              "v": {
+                "v": " 1771-1832",
+                "l": " 1771-1832"
+              }
+            },
+            {
+              "v": {
+                "v": " 1816-1909.",
+                "l": " 1816-1909."
+              }
+            },
+            {
+              "v": {
+                "v": " 1855-1934.",
+                "l": " 1855-1934."
+              }
+            },
+            {
+              "v": {
+                "v": " d. 1929.",
+                "l": " d. 1929."
+              }
+            },
+            {
+              "v": {
+                "v": " 1786-1880.",
+                "l": " 1786-1880."
+              }
+            },
+            {
+              "v": {
+                "v": " 1650-1722.",
+                "l": " 1650-1722."
+              }
+            },
+            {
+              "v": {
+                "v": " 1859-1930",
+                "l": " 1859-1930"
+              }
+            },
+            {
+              "v": {
+                "v": " 1800-1886.",
+                "l": " 1800-1886."
+              }
+            },
+            {
+              "v": {
+                "v": " 1788-1824",
+                "l": " 1788-1824"
+              }
+            },
+            {
+              "v": {
+                "v": " 1797-1846.",
+                "l": " 1797-1846."
+              }
+            },
+            {
+              "v": {
+                "v": " 1792-1878",
+                "l": " 1792-1878"
+              }
+            },
+            {
+              "v": {
+                "v": " 1861-1922.",
+                "l": " 1861-1922."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author date",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author date using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Personal author 4",
+          "expression": "value",
+          "columnName": "Personal author 4",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " 1769-1852",
+                "l": " 1769-1852"
+              }
+            },
+            {
+              "v": {
+                "v": " 1621-1679.",
+                "l": " 1621-1679."
+              }
+            },
+            {
+              "v": {
+                "v": " 1628-1687.",
+                "l": " 1628-1687."
+              }
+            },
+            {
+              "v": {
+                "v": " 1852-1896.",
+                "l": " 1852-1896."
+              }
+            },
+            {
+              "v": {
+                "v": " 1815-1875.",
+                "l": " 1815-1875."
+              }
+            },
+            {
+              "v": {
+                "v": " 1788-1824.",
+                "l": " 1788-1824."
+              }
+            },
+            {
+              "v": {
+                "v": " 1832-1904.",
+                "l": " 1832-1904."
+              }
+            },
+            {
+              "v": {
+                "v": " 1833-1907.",
+                "l": " 1833-1907."
+              }
+            },
+            {
+              "v": {
+                "v": " 1771-1832",
+                "l": " 1771-1832"
+              }
+            },
+            {
+              "v": {
+                "v": " 1816-1909.",
+                "l": " 1816-1909."
+              }
+            },
+            {
+              "v": {
+                "v": " 1855-1934.",
+                "l": " 1855-1934."
+              }
+            },
+            {
+              "v": {
+                "v": " 1786-1880.",
+                "l": " 1786-1880."
+              }
+            },
+            {
+              "v": {
+                "v": " 1650-1722.",
+                "l": " 1650-1722."
+              }
+            },
+            {
+              "v": {
+                "v": " 1859-1930",
+                "l": " 1859-1930"
+              }
+            },
+            {
+              "v": {
+                "v": " 1800-1886.",
+                "l": " 1800-1886."
+              }
+            },
+            {
+              "v": {
+                "v": " 1788-1824",
+                "l": " 1788-1824"
+              }
+            },
+            {
+              "v": {
+                "v": " 1797-1846.",
+                "l": " 1797-1846."
+              }
+            },
+            {
+              "v": {
+                "v": " 1792-1878",
+                "l": " 1792-1878"
+              }
+            },
+            {
+              "v": {
+                "v": " 1861-1922.",
+                "l": " 1861-1922."
+              }
+            },
+            {
+              "v": {
+                "v": " d. 1929.",
+                "l": " d. 1929."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author 4",
+    "expression": "grel:value.blank",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author 4 using expression grel:value.blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author date",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author date using expression grel:value.replace(\".\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author date",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author date using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Non-date author info",
+          "expression": "value",
+          "columnName": "Non-date author info",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " Author of “The Fall of Carthage.”.",
+                "l": " Author of “The Fall of Carthage.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Master of Arts.",
+                "l": " Master of Arts."
+              }
+            },
+            {
+              "v": {
+                "v": " Poet Laureate.",
+                "l": " Poet Laureate."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic Author.",
+                "l": " Dramatic Author."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic Writer.",
+                "l": " Dramatic Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Journalist.",
+                "l": " Journalist."
+              }
+            },
+            {
+              "v": {
+                "v": " Attorney.",
+                "l": " Attorney."
+              }
+            },
+            {
+              "v": {
+                "v": " Publisher.",
+                "l": " Publisher."
+              }
+            },
+            {
+              "v": {
+                "v": " Member of the Dramatic Authors' Society.",
+                "l": " Member of the Dramatic Authors' Society."
+              }
+            },
+            {
+              "v": {
+                "v": " Artist.",
+                "l": " Artist."
+              }
+            },
+            {
+              "v": {
+                "v": " Tragedian.",
+                "l": " Tragedian."
+              }
+            },
+            {
+              "v": {
+                "v": " Translator of “The Lusiad.”.",
+                "l": " Translator of “The Lusiad.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Historiographer Royal to Charles II.",
+                "l": " Historiographer Royal to Charles II."
+              }
+            },
+            {
+              "v": {
+                "v": " Actor.",
+                "l": " Actor."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Manuscripts of Erdély.”.",
+                "l": " Author of “The Manuscripts of Erdély.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Lecturer.",
+                "l": " Lecturer."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatist",
+                "l": " Dramatist"
+              }
+            },
+            {
+              "v": {
+                "v": " Barrister-at-Law.",
+                "l": " Barrister-at-Law."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon's Mate",
+                "l": " Surgeon's Mate"
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Life of Canning.”.",
+                "l": " Author of “The Life of Canning.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Playwright.",
+                "l": " Playwright."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “Balfour Randall",
+                "l": " Author of “Balfour Randall"
+              }
+            },
+            {
+              "v": {
+                "v": " Writer of Plays.",
+                "l": " Writer of Plays."
+              }
+            },
+            {
+              "v": {
+                "v": " Poetical Writer.",
+                "l": " Poetical Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatic and Miscellaneous Writer.",
+                "l": " Dramatic and Miscellaneous Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Miscellaneous Writer.",
+                "l": " Miscellaneous Writer."
+              }
+            },
+            {
+              "v": {
+                "v": " Antiquary.",
+                "l": " Antiquary."
+              }
+            },
+            {
+              "v": {
+                "v": " Lessee of Royalty Theatre.",
+                "l": " Lessee of Royalty Theatre."
+              }
+            },
+            {
+              "v": {
+                "v": " Contributor to “The Microcosm.”.",
+                "l": " Contributor to “The Microcosm.”."
+              }
+            },
+            {
+              "v": {
+                "v": " Barrister-at-Law",
+                "l": " Barrister-at-Law"
+              }
+            },
+            {
+              "v": {
+                "v": " Dramatist.",
+                "l": " Dramatist."
+              }
+            },
+            {
+              "v": {
+                "v": " Theatrical Machinist.",
+                "l": " Theatrical Machinist."
+              }
+            },
+            {
+              "v": {
+                "v": " Stage Manager.",
+                "l": " Stage Manager."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Conspiracy”.",
+                "l": " Author of “The Conspiracy”."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon",
+                "l": " Surgeon"
+              }
+            },
+            {
+              "v": {
+                "v": " Novelist.",
+                "l": " Novelist."
+              }
+            },
+            {
+              "v": {
+                "v": " Surgeon.",
+                "l": " Surgeon."
+              }
+            },
+            {
+              "v": {
+                "v": " Schoolmaster.",
+                "l": " Schoolmaster."
+              }
+            },
+            {
+              "v": {
+                "v": " Secretary to the Earl of Roxburgh.",
+                "l": " Secretary to the Earl of Roxburgh."
+              }
+            },
+            {
+              "v": {
+                "v": " Teacher of Elocution.",
+                "l": " Teacher of Elocution."
+              }
+            },
+            {
+              "v": {
+                "v": " Poet",
+                "l": " Poet"
+              }
+            },
+            {
+              "v": {
+                "v": " Secretary to the Hon. Order of the Bath.",
+                "l": " Secretary to the Hon. Order of the Bath."
+              }
+            },
+            {
+              "v": {
+                "v": " Engraver and Silversmith.",
+                "l": " Engraver and Silversmith."
+              }
+            },
+            {
+              "v": {
+                "v": " Professor of Oriental Languages at St. Andrews.",
+                "l": " Professor of Oriental Languages at St. Andrews."
+              }
+            },
+            {
+              "v": {
+                "v": " City Poet.",
+                "l": " City Poet."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of “The Chapter of Accidents”.",
+                "l": " Author of “The Chapter of Accidents”."
+              }
+            },
+            {
+              "v": {
+                "v": " Author of Vimonda.",
+                "l": " Author of Vimonda."
+              }
+            },
+            {
+              "v": {
+                "v": " the Poet.",
+                "l": " the Poet."
+              }
+            },
+            {
+              "v": {
+                "v": " Professor of Humanity in the University of Glasgow.",
+                "l": " Professor of Humanity in the University of Glasgow."
+              }
+            },
+            {
+              "v": {
+                "v": " Comedian.",
+                "l": " Comedian."
+              }
+            },
+            {
+              "v": {
+                "v": " Poet.",
+                "l": " Poet."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Non-date author info",
+    "expression": "grel:value.blank",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Non-date author info using expression grel:value.blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Personal author 1",
+    "expression": "join ([cells['Personal author 1'].value,cells['Personal author 2'].value,cells['Non-date author info'].value,cells['Personal author 4'].value,cells['Personal author 5'].value],',')",
+    "onError": "keep-original",
+    "newColumnName": "Personal author",
+    "columnInsertIndex": 5,
+    "description": "Create column Personal author at index 5 based on column Personal author 1 using expression join ([cells['Personal author 1'].value,cells['Personal author 2'].value,cells['Non-date author info'].value,cells['Personal author 4'].value,cells['Personal author 5'].value],',')"
+  },
+  {
+    "op": "core/column-move-left",
+    "columnName": "Personal author",
+    "description": "Move column Personal author to the left"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author 1",
+    "description": "Remove column Personal author 1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author 2",
+    "description": "Remove column Personal author 2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Non-date author info",
+    "description": "Remove column Non-date author info"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author 4",
+    "description": "Remove column Personal author 4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author 5",
+    "description": "Remove column Personal author 5"
+  }
+]

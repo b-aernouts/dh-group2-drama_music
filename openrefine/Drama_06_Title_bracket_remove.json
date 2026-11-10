@@ -1,0 +1,26 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Title",
+    "expression": "grel:value.replace(/^\\[(.*)\\]$/, \"$1\")",
+    "onError": "set-to-blank",
+    "newColumnName": "TEST Title",
+    "columnInsertIndex": 8,
+    "description": "Create column TEST Title at index 8 based on column Title using expression grel:value.replace(/^\\[(.*)\\]$/, \"$1\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Title",
+    "description": "Remove column Title"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TEST Title",
+    "newColumnName": "Title",
+    "description": "Rename column TEST Title to Title"
+  }
+]
