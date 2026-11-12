@@ -1,0 +1,188 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Imprint",
+    "expression": "grel:value.substring(-7)",
+    "onError": "set-to-blank",
+    "newColumnName": "Year of publication",
+    "columnInsertIndex": 10,
+    "description": "Create column Year of publication at index 10 based on column Imprint using expression grel:value.substring(-7)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "grel:value.replace(\",\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression grel:value.replace(\",\", \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "grel:value.replace(\".\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression grel:value.replace(\".\", \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Year of publication",
+          "columnName": "Year of publication",
+          "query": "]",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "text",
+          "name": "Year of publication",
+          "columnName": "Year of publication",
+          "query": "[",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Year of publication",
+          "columnName": "Year of publication",
+          "query": "]",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "text",
+          "name": "Year of publication",
+          "columnName": "Year of publication",
+          "query": "[",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "grel:\"[\"+value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression grel:\"[\"+value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression value.trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Imprint",
+    "expression": "grel:value.find(/^[^:]*/)[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Place of publishing",
+    "columnInsertIndex": 10,
+    "description": "Create column Place of publishing at index 10 based on column Imprint using expression grel:value.find(/^[^:]*/)[0]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(/,[^,]*$/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(/,[^,]*$/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression value.trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Imprint",
+    "expression": "grel:value.replace(cells[\"Place of publishing\"].value, \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Publisher/printer",
+    "columnInsertIndex": 10,
+    "description": "Create column Publisher/printer at index 10 based on column Imprint using expression grel:value.replace(cells[\"Place of publishing\"].value, \"\").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "grel:value.replace(/^[^:]*:/, \"\").replace(/,[^,]*$/, \"\").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression grel:value.replace(/^[^:]*:/, \"\").replace(/,[^,]*$/, \"\").trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Imprint",
+    "description": "Remove column Imprint"
+  }
+]

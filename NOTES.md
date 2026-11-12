@@ -43,3 +43,15 @@
 - Check difference and manually change 5 records.
 - Remove old Title column and change name TEST title to Title.
 
+## 12/11/2026 Step 7 Split Imprint
+- Split the imprint column into three separate columns: `Place of imprint`, `Printer/publisher`, and `year published`
+- First create a new column based on the `Imprint` column using `value.substring(-7)`to isolate the date.
+    - Remove all "." and "," that were left.
+    - correct 16 lines manually.
+- Create new column trying to split off everything before the ":" delimiter to extract the place of imprint.
+    - manual clean and correct 73 rows.
+- Create new column to split of the charachters in between the ":" and the "," to extract the publisher/printer.
+    - manual clean and correct 38 rows.
+- Delete original `Imprint`column.
+
+
