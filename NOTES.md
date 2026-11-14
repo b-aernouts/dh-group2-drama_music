@@ -55,3 +55,8 @@
 - Delete original `Imprint`column.
 
 
+## 14/11/2026 Step 8 Clean author titles
+- use text facet to look for titles (eg sir, bart. count, baron, ...)
+    - Use replace to remove titles, 135 records changed.
+
+
