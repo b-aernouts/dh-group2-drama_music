@@ -1,0 +1,158 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": "[",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": "[mass.]",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(\"[\",\"\").replace(\"]\",\"\").replace(\";\",\",\").replace(\"and\",\",\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(\"[\",\"\").replace(\"]\",\"\").replace(\";\",\",\").replace(\"and\",\",\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": "printed",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(\"printed\",\"\").replace(\" ,\", \",\").replace(\";\",\",\").replace(\"Printed in \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(\"printed\",\"\").replace(\" ,\", \",\").replace(\";\",\",\").replace(\"Printed in \",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": "]",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": "[Mass.]",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(\"] \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(\"] \",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": "&",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(\" &\",\",\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(\" &\",\",\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": "and",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(\" and\",\",\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(\" and\",\",\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": ";",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(\";\",\",\").replace(\" ;\",\",\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(\";\",\",\").replace(\" ;\",\",\")"
+  }
+]
