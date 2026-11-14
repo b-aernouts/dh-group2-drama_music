@@ -1,0 +1,342 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Personal author",
+    "expression": "grel:value.replace(/[a-zA-Z]/, \"\").replace(/[.,?()'\\[\\]]/,\"\").replace(\" \",\"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Personal author date",
+    "columnInsertIndex": 5,
+    "description": "Create column Personal author date at index 5 based on column Personal author using expression grel:value.replace(/[a-zA-Z]/, \"\").replace(/[.,?()'\\[\\]]/,\"\").replace(\" \",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Personal author date",
+          "expression": "value",
+          "columnName": "Personal author date",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "́1796-1880",
+                "l": "́1796-1880"
+              }
+            },
+            {
+              "v": {
+                "v": "-1872-1945",
+                "l": "-1872-1945"
+              }
+            },
+            {
+              "v": {
+                "v": "-1845-1906",
+                "l": "-1845-1906"
+              }
+            },
+            {
+              "v": {
+                "v": "́1821-1895",
+                "l": "́1821-1895"
+              }
+            },
+            {
+              "v": {
+                "v": "-1",
+                "l": "-1"
+              }
+            },
+            {
+              "v": {
+                "v": "̀1854-1945",
+                "l": "̀1854-1945"
+              }
+            },
+            {
+              "v": {
+                "v": "-1847-1918",
+                "l": "-1847-1918"
+              }
+            },
+            {
+              "v": {
+                "v": "-1832",
+                "l": "-1832"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author date",
+    "expression": "grel:value.substring(1)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author date using expression grel:value.substring(1)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Personal author date",
+          "columnName": "Personal author date",
+          "query": "[&´`'-]",
+          "mode": "regex",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "Personal author date",
+          "expression": "value",
+          "columnName": "Personal author date",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "-",
+                "l": "-"
+              }
+            },
+            {
+              "v": {
+                "v": "---",
+                "l": "---"
+              }
+            },
+            {
+              "v": {
+                "v": "̀-̧",
+                "l": "̀-̧"
+              }
+            },
+            {
+              "v": {
+                "v": "-̧",
+                "l": "-̧"
+              }
+            },
+            {
+              "v": {
+                "v": "“”&",
+                "l": "“”&"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author date",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author date using expression null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Personal author date",
+          "expression": "value",
+          "columnName": "Personal author date",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "̀",
+                "l": "̀"
+              }
+            },
+            {
+              "v": {
+                "v": "́",
+                "l": "́"
+              }
+            },
+            {
+              "v": {
+                "v": "“̂”",
+                "l": "“̂”"
+              }
+            },
+            {
+              "v": {
+                "v": "̌́",
+                "l": "̌́"
+              }
+            },
+            {
+              "v": {
+                "v": "“”",
+                "l": "“”"
+              }
+            },
+            {
+              "v": {
+                "v": "*************",
+                "l": "*************"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author date",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author date using expression null"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Personal author",
+    "expression": "grel:value.replace(/[0-9]/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Personal author.",
+    "columnInsertIndex": 5,
+    "description": "Create column Personal author. at index 5 based on column Personal author using expression grel:value.replace(/[0-9]/, \"\")"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author.",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column Personal author. by separator"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author. 1",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author. 1 using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Personal author. 1",
+    "expression": "join ([coalesce(cells['Personal author. 1'].value,''),coalesce(cells['Personal author. 2'].value,'')],',')",
+    "onError": "keep-original",
+    "newColumnName": "Personal author clean",
+    "columnInsertIndex": 6,
+    "description": "Create column Personal author clean at index 6 based on column Personal author. 1 using expression join ([coalesce(cells['Personal author. 1'].value,''),coalesce(cells['Personal author. 2'].value,'')],',')"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author. 1",
+    "description": "Remove column Personal author. 1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author. 2",
+    "description": "Remove column Personal author. 2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author. 3",
+    "description": "Remove column Personal author. 3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author. 4",
+    "description": "Remove column Personal author. 4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author. 5",
+    "description": "Remove column Personal author. 5"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Personal author clean",
+          "expression": "value",
+          "columnName": "Personal author clean",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Personal author clean",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Personal author clean using expression null"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Personal author",
+    "description": "Remove column Personal author"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Personal author clean",
+    "newColumnName": "Personal author",
+    "description": "Rename column Personal author clean to Personal author"
+  }
+]
