@@ -115,3 +115,9 @@
     - last manual check to see if any values were overlooked
 - Delete og column
 
+## 15/11/2026 Step 7 Fill out missing author info
+- Use facet to isolate empty personal author records, then use text filter on title field to search on the word "by" => 122 records
+- Take information from `Other personal authors`column to fill gaps where possible => 75 records
+    - Process these data similarly to the personal author data in step 3, except copying the data into the author date column to then clean up.
+- Take information for the remaining records from the title => manual operation, 10 records
+
