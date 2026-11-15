@@ -76,10 +76,10 @@
 - *Titles* often enclosed in square brackets, not clear whether this has a meaning or is just an artefact from the metadata export.
 - *Author* names in all sorts of formats => last name capitalised, sometimes dates added. Dates need to be split from name, name normalised into format last name, first name.
 - Column DDC (Dewey?) is empty
-- There are 6 corprate authors, yet these contain personal author information in the title field. One even has two personal authors named in the corporate author field
-- 7 records hold information in the Series field
-- There are 16 subject allocations, could be considered to be left out, depending on richness of other data sets.
-- All records have Genre "Music", 527 have Type "comedy", 636 "play", 32 "recitation", and 452 "tragedy".
+- There are 16 corprate authors.
+- 1 record holds information in the Series field
+- There are 18 subject allocations, could be considered to be left out, depending on richness of other data sets.
+- All records have Genre "Music", 44 have Type "hymn", 42 "melody", 419 "opera", and 447 "song". A number of records seem to have wrongly allocated genre typ "opera" to actual works of prose.
 
 ## 14/11/2026 Step 1 delete DDC
 
@@ -95,4 +95,23 @@
 - recombine column 1 (last name) and column 2 (first name)
 - manual cleaning of only "," values.
 - deleting irrelevant columns.
+
+## 14/11/2026 Step 4 Language (041)
+- Remove MARC format and convert to comma separated lang codes. 8 records were edited.
+
+## 14/11/2026 Step 5 Cleaning Title field
+- Get rid of square brackets around full title
+    - custom facet `value[0]=="[" and value[-1]=="]"`to filter out cases
+    - delete brackets => 98 rows were altered
+
+
+## 14/11/2026 Step 6 Imprint
+- Create new column `Year of publication` with `value.replace(/[a-zA-Z]/,"").replace(/[.,!:&;-]/, "")`
+- create new column `Place of publishing` out of og column
+- create new column `Publisher/printer`based on og column by excluding values from column `Place of publishing`
+    - exclude values from column `Year of publication`
+    - clean up by looking for loose punctuation
+    - re-punctuate initials
+    - last manual check to see if any values were overlooked
+- Delete og column
 

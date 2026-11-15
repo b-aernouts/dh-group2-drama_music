@@ -1,0 +1,824 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Imprint",
+    "expression": "grel:value.replace(/[a-zA-Z]/,\"\").replace(/[.,!:&;-]/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Year of publication",
+    "columnInsertIndex": 10,
+    "description": "Create column Year of publication at index 10 based on column Imprint using expression grel:value.replace(/[a-zA-Z]/,\"\").replace(/[.,!:&;-]/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Imprint",
+          "expression": "grel:value[0]==\"[\"",
+          "columnName": "Imprint",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Year of publication",
+          "expression": "grel:value[-1]==\"]\"",
+          "columnName": "Year of publication",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "grel:value.replace(/[\\[\\]\\(\\)?]/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression grel:value.replace(/[\\[\\]\\(\\)?]/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Imprint",
+          "expression": "grel:value[0]==\"[\"",
+          "columnName": "Imprint",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Year of publication",
+          "expression": "grel:value[-1]==\"]\"",
+          "columnName": "Year of publication",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Imprint",
+          "expression": "grel:value[0]==\"[\"",
+          "columnName": "Imprint",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Year of publication",
+          "expression": "grel:value[-1]==\"]\"",
+          "columnName": "Year of publication",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression grel:value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Year of publication",
+    "expression": "grel:value.replace(\" \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year of publication using expression grel:value.replace(\" \",\"\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Year of publication",
+    "newColumnName": "Year published",
+    "description": "Rename column Year of publication to Year published"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Imprint",
+    "expression": "grel:value.find(/^[^:]*/)[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Place of publishing",
+    "columnInsertIndex": 10,
+    "description": "Create column Place of publishing at index 10 based on column Imprint using expression grel:value.find(/^[^:]*/)[0]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(/\\d*/, \"\").replace(/[.\\]\\[]/, \"\").replace(\" ?\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(/\\d*/, \"\").replace(/[.\\]\\[]/, \"\").replace(\" ?\", \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Place of publishing",
+          "columnName": "Place of publishing",
+          "query": "print",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(/print.*/, \"\").replace(\";\", \",\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(/print.*/, \"\").replace(\";\", \",\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "London ",
+          "London, ",
+          "London,",
+          "London",
+          "London, , ",
+          "London, -",
+          " London, ",
+          "London,  ",
+          "London, ,",
+          "London,, ",
+          "London? ",
+          "London?, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "London "
+      },
+      {
+        "from": [
+          "London, New York ",
+          "London & New York ",
+          "London ; New York ",
+          "New York & London ",
+          "New York ; London ",
+          "New York, London "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "London, New York "
+      },
+      {
+        "from": [
+          "Dublin,",
+          "Dublin ",
+          "Dublin, ",
+          "Dublin?,",
+          "Dublin?, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dublin"
+      },
+      {
+        "from": [
+          "Milano, ",
+          "Milano,",
+          "Milano, -?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Milano"
+      },
+      {
+        "from": [
+          "Lipsiae ",
+          "Lipsiae, ",
+          "Lipsiæ "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lipsiae"
+      },
+      {
+        "from": [
+          "Napoli, ",
+          "Napoli, , ",
+          "Napoli, -"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Napoli"
+      },
+      {
+        "from": [
+          "",
+          "?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      },
+      {
+        "from": [
+          "Venezia, ",
+          "Venezia, -"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Venezia"
+      },
+      {
+        "from": [
+          "Boston, ",
+          "Boston "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Boston"
+      },
+      {
+        "from": [
+          "Philadelphia ",
+          "Philadelphia, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Philadelphia "
+      },
+      {
+        "from": [
+          "Calcutta ",
+          "Calcutta, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Calcutta "
+      },
+      {
+        "from": [
+          "Bologna, ",
+          "Bologna, -"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bologna"
+      },
+      {
+        "from": [
+          "Edinburgh ",
+          "Edinburgh, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Edinburgh "
+      },
+      {
+        "from": [
+          "Boston Mass ",
+          "Boston Mass, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Boston Mass "
+      },
+      {
+        "from": [
+          "New York ",
+          "New York, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New York "
+      },
+      {
+        "from": [
+          "Glasgow ",
+          "Glasgow, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glasgow "
+      },
+      {
+        "from": [
+          "Albany ",
+          "Albany, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Albany "
+      },
+      {
+        "from": [
+          "Mexico, ",
+          "México, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mexico, "
+      },
+      {
+        "from": [
+          "Firenze, ",
+          "Firenze, -"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Firenze"
+      },
+      {
+        "from": [
+          "London, Nuremberg ",
+          "London; Nuremberg "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "London, Nuremberg "
+      },
+      {
+        "from": [
+          "Rugby ",
+          "Rugby, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rugby "
+      },
+      {
+        "from": [
+          "Nottingham",
+          "Nottingham "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nottingham"
+      },
+      {
+        "from": [
+          "Bradford-on-Avon ",
+          "Bradford-on-Avon?, "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bradford-on-Avon "
+      },
+      {
+        "from": [
+          "Paris, ",
+          "Paris "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Paris"
+      }
+    ],
+    "description": "Mass edit cells in column Place of publishing"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Place of publishing",
+          "expression": "grel:value[-1]==\",\"",
+          "columnName": "Place of publishing",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Place of publishing",
+    "expression": "grel:value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Place of publishing using expression grel:value.replace(\",\",\"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Imprint",
+    "expression": "grel:value.replace(cells[\"Place of publishing\"].value, \"\").replace(cells[\"Year published\"].value, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Publisher/printer",
+    "columnInsertIndex": 10,
+    "description": "Create column Publisher/printer at index 10 based on column Imprint using expression grel:value.replace(cells[\"Place of publishing\"].value, \"\").replace(cells[\"Year published\"].value, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Publisher/printer",
+          "expression": "value",
+          "columnName": "Publisher/printer",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            },
+            {
+              "v": {
+                "v": ", .",
+                "l": ", ."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Publisher/printer",
+          "expression": "grel:value[0]==\":\"",
+          "columnName": "Publisher/printer",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "Publisher/printer",
+          "columnName": "Publisher/printer",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "grel:value.replace(value[0], \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression grel:value.replace(value[0], \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Publisher/printer",
+          "columnName": "Publisher/printer",
+          "query": "",
+          "mode": "regex",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "Publisher/printer",
+          "expression": "grel:value[-1]==\".\"",
+          "columnName": "Publisher/printer",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "grel:value.replace(value[-1], \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression grel:value.replace(value[-1], \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Publisher/printer",
+          "columnName": "Publisher/printer",
+          "query": "",
+          "mode": "regex",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "grel:value.replace(cells[\"Year published\"].value, \"\").replace(/[\\[\\]\\,\\.\\:\\?]/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression grel:value.replace(cells[\"Year published\"].value, \"\").replace(/[\\[\\]\\,\\.\\:\\?]/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Publisher/printer",
+          "columnName": "Publisher/printer",
+          "query": "",
+          "mode": "regex",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "Publisher/printer",
+          "expression": "grel:value.contains(/\\d/)",
+          "columnName": "Publisher/printer",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Publisher/printer",
+          "expression": "grel:value[1]==\" \"",
+          "columnName": "Publisher/printer",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "grel:forEach(value.split(\" \"), v, if(v.length() == 1, v + \".\", v)).join(\" \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression grel:forEach(value.split(\" \"), v, if(v.length() == 1, v + \".\", v)).join(\" \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "grel:forEach(value.split(\" \"), v, if(v.length() == 1, v + \".\", v)).join(\" \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression grel:forEach(value.split(\" \"), v, if(v.length() == 1, v + \".\", v)).join(\" \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Publisher/printer",
+    "expression": "grel:value.replace(\"&.\", \"&\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Publisher/printer using expression grel:value.replace(\"&.\", \"&\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Imprint",
+    "description": "Remove column Imprint"
+  }
+]
