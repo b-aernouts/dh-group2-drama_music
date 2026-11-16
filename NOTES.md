@@ -126,3 +126,22 @@
     - Process these data similarly to the personal author data in step 3, except copying the data into the author date column to then clean up.
 - Take information for the remaining records from the title => manual operation, 10 records
 
+
+
+# Merged
+## 16/11/2026 Step 1 merge the three documents
+- Create new open refine file by merging the three sets: 13 159 records
+
+## 16/11/2026 Step 2 Cluster Personal author
+
+## 16/11/2026 Step 3 Cluster place of publishing
+
+## 16/11/2026 Step 4 Clean up rogue column `Year published`
+- music data set had wrong column title "Year published" instead of "year of publication"
+- copy values from `Year published` to `Year of publication`
+- Delete `Year published`
+
+## 16/11/2026 Step 5 Reconcile Personal Author Wikidata
+- Reconcile Personal author data with persons in Wikidata => 4623 were matched, 1409 were blank, 2518 did not result in any suggestions, 4609 had a number of suggestions but low confidence
+- rerun reconciliation on the subset of 2518 records with suggestions, but filtered on records that have any data in the `Personal author date` column.
+    - This resulted in 5170 matched records total. 758 records were left from the last subset, which was too much to clean up manually.
