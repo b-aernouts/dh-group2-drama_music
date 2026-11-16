@@ -64,7 +64,12 @@
 - remove extra information
 - do some manual cleaning
 
-## 14/11/2026 Step 10 
+## 16/11/2026 Step 10 Missing author information
+- Check other author column to check for wrongly allocated author information
+    - 103 records
+- Check title for author mention => ue filter "by", then split on "by"
+    - 63 records
+
 
 
 
